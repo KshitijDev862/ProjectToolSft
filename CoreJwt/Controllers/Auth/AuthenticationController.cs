@@ -31,7 +31,7 @@ namespace CoreJwt.Controllers.Auth {
                 appuser.CreatedDate=DateTime.Now;
                 await _context.AddAsync (appuser);
                 await _context.SaveChangesAsync ();
-                return Ok (201);
+                return Ok (appuser);
             } catch (Exception ex) {
                 throw ex;
             }
